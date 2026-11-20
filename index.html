@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sabina's Online Business Card</title>
+    <link rel="icon" href="data:,">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,6 +16,8 @@
         <nav class="main-nav">
             <a href="#profile">Profile</a>
             <a href="#box-model">Box Model Lab</a>
+            <a href="#hobbies">Hobbies</a>
+            <a href="#gallery">Gallery</a>
             <a href="#contact">Contact</a>
         </nav>
 
@@ -51,6 +54,24 @@
                     <h3>Solver (border-box)</h3>
                     <p>I kept my 300px promise safely.</p>
                 </div>
+            </section>
+
+            <!-- [Step 1] Hobbies rendered from a JavaScript array -->
+            <section class="hobby-lab" id="hobbies">
+                <h2>✨ My Hobbies</h2>
+                <p>This list is built by JavaScript, not typed into the HTML!</p>
+                <div id="hobby-list"></div>
+            </section>
+
+            <!-- [Step 2] Hobby Gallery -->
+            <!-- Photo credits (Wikimedia Commons): photography.jpg - Michal Osmenda, CC BY-SA 2.0;
+                 skiing.jpg - Ruth Hartnup, CC BY 2.0; piano.jpg - pxhere, CC0;
+                 cooking.jpg - Shixart1985, CC BY 2.0 -->
+            <section class="gallery-lab" id="gallery">
+                <h2>📸 Hobby Gallery</h2>
+                <img id="gallery-image" src="photography.jpg" alt="Hobby gallery photo">
+                <p id="gallery-caption"></p>
+                <button id="next-photo" type="button">Next Photo</button>
             </section>
         </div>
     </main>
