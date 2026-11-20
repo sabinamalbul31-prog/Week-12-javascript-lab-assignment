@@ -29,3 +29,43 @@ let themeToggle = document.querySelector("#theme-toggle");
 themeToggle.addEventListener("click", function () {
   document.body.classList.toggle("dark-mode");
 });
+
+// Step 1: Render hobbies from an array using a loop
+const hobbies = ['Photography', 'Skiing', 'Piano', 'Cooking'];
+const listContainer = document.getElementById('hobby-list');
+const ul = document.createElement('ul');
+
+for (let i = 0; i < hobbies.length; i++) {
+  const li = document.createElement('li');
+  li.textContent = hobbies[i];
+  ul.appendChild(li);
+}
+
+listContainer.appendChild(ul);
+
+// Step 2: Hobby gallery with a "Next Photo" button
+const galleryImages = [
+  'photography.jpg',
+  'skiing.jpg',
+  'piano.jpg',
+  'cooking.jpg'
+];
+const galleryCaptions = ['Photography', 'Skiing', 'Piano', 'Cooking'];
+
+let currentIndex = 0;
+const galleryImage = document.getElementById('gallery-image');
+const galleryCaption = document.getElementById('gallery-caption');
+const nextPhotoButton = document.getElementById('next-photo');
+
+nextPhotoButton.addEventListener('click', function () {
+  currentIndex++;
+
+  if (currentIndex >= galleryImages.length) {
+    currentIndex = 0;
+  }
+
+  galleryImage.src = galleryImages[currentIndex];
+  galleryCaption.textContent = galleryCaptions[currentIndex];
+});
+
+galleryCaption.textContent = galleryCaptions[currentIndex];
